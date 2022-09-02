@@ -1,23 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
 
+function Cart() {
+  const [monstera, lierre, bouquet] = [8,10,15];
+  const total = monstera + lierre + bouquet;
+  return (
+    <>
+      <h2>Panier</h2>
+      <ul>
+        <ol>Monstera {monstera}e</ol>
+        <ol>olerre {lierre}e</ol>
+        <ol>Bouquet de fleurs {bouquet}e</ol>
+        <ol>Prix total : {total +'e'}</ol>
+      </ul>
+    </>
+  )
+}
+function Banner() {
+  const text = 'lorem lorem laleil oel';
+  return (
+    <>
+      <h1>Boutique mon c</h1>
+      <p>{text}</p>
+    </>
+  );
+}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Banner />
+      <Cart />
     </div>
   );
 }
